@@ -1,6 +1,6 @@
 .App-header {
     font-size: 22px;
-    background-color: whitesmoke;
+    background-color: whitesmoke!important;
     color: black!important;
     width: 100%!important;
     position: fixed;

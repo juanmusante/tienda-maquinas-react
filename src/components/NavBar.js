@@ -4,7 +4,7 @@ import CartWidget from './CartWidget';
 function NavBar(){
     return(
         <header className="App-header shadow p-3 mb-5 bg-body rounded">
-            <p className="logo">TATT00 SH0P</p>
+            <h1 className="logo">TATT00 SH0P</h1>
             <nav className="navegador">
                 <ul className="ul">
                     <li className="li">
