@@ -1,6 +1,6 @@
-const ItemListContainer = () => {
+const ItemListContainer = ({saludo}) => {
     return (
-        <div className="ItemListContainer"> 'HOLA MUNDO 👋🏻 ItemListContainer' </div>
+        <div className="ItemListContainer">{saludo}</div>
     );
 }
 
