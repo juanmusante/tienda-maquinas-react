@@ -1,5 +1,30 @@
+body {
+	/* background: #f2f2f2;  */
+	font-size: 1em;
+  margin-top: 120px;
+}
+
 .ItemListContainer{
     margin-top: 120px;
     margin-left: 25px;
     font-weight: bold;
-  }
+}
+.eachProduct{
+  border: 3px solid;
+  border-radius: 9px;
+  width: 450px;
+  height: 390px;
+  margin: 10px;
+  text-align: center;
+}
+.imgProduct{
+    height: 250px;
+    width: 250px;
+}
+.products{
+    display: grid!important;
+    grid-template-columns: auto auto auto!important;
+    color: rgb(81, 40, 40)!important;
+    justify-content: center!important;
+    margin: 0 auto;
+}

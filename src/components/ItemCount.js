@@ -5,14 +5,14 @@ export function ItemCount({stock, initial}) {
     
     const incraese = () => {
         while (stock > number)
-        if (stock > 0){
+        if (stock >= 1){
             setNumber(number + 1)
             break;
         }
     }
     const decrease = () => {
         while (number <= stock && number > 0)
-        if (stock > 0){
+        if (stock >= 1){
             setNumber(number - 1)
             break;
         }
@@ -24,7 +24,7 @@ export function ItemCount({stock, initial}) {
         } else {
             alert(`Se agregaron al carrito ${number} unidades`);
         }
-        console.log(stock)
+        // console.log(stock)
     }
 
     return (

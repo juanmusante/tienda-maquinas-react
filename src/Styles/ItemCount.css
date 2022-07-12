@@ -29,5 +29,7 @@
     font-weight: bold;
 }
 .text{
-    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
