@@ -2,20 +2,31 @@ import React, { useState } from "react";
 import ItemCount from "../Components/ItemCount";
 import maquinas from "../Data/MockData";
 import ItemList from "../Components/ItemList";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Loading from "../Components/Loading";
+
 
 const ItemListContainer = ({ saludo }, props) => {
   const [productList, setProductList] = useState([]);
 
-  const productPromise = (time, task) => {
+  const [loading, setLoading] = useState(true);
+
+  function loadingChange(){
+    setLoading(false);
+  }
+  setTimeout(loadingChange, 2000);
+
+  const productPromise = (task) => {
     return new Promise((resolve, reject) => {
-      setTimeout(() => {
         resolve(task);
-      }, time);
-    });
+      });
   }
 
-  productPromise(2000, maquinas)
+  if(loading){
+    return(
+      <Loading />
+    )
+  }else{
+  productPromise(maquinas)
     .then(datos => {setProductList(datos)})
 
   return (
@@ -26,7 +37,7 @@ const ItemListContainer = ({ saludo }, props) => {
         <ItemList items={productList} />
       </div>
     </>
-  );
+  );}
 };
 
 export default ItemListContainer;
